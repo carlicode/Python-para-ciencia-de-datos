@@ -1,0 +1,9 @@
+import pandas as pd
+
+#Leemos el archivo con pandas
+file = pd.read_csv('empleados.csv', delimiter=';')
+
+#Especifico la columna que quiero eliminar
+df_column_no_null = file.drop(axis=1,columns=['Apellido'])
+
+print(df_column_no_null)
