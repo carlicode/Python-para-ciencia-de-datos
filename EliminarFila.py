@@ -1,10 +1,10 @@
 import pandas as pd
 
 #Leemos el archivo con pandas
-file = pd.read_csv('empleados.csv', delimiter=';')
+df = pd.read_csv('empleados.csv', delimiter=';')
 
 #Especifico la columna que quiero eliminar que tiene puros valores nulos
-df_column_no_null = file.drop(axis=1,columns=['Apellido'])
+df_column_no_null = df.drop(axis=1,columns=['Apellido'])
 
 #Elimino las filas que tienen al menos un valor nulo
 #Con Axis 0 estamos especificando las filas
