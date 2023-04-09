@@ -1,15 +1,15 @@
 import pandas as pd
 
 #Leemos el archivo con pandas
-file = pd.read_csv('empleados.csv', delimiter=';')
+df = pd.read_csv('empleados.csv', delimiter=';')
 
 #Averiguamos el tamaño del archivo CSV
-print(file.shape)
+print(df.shape)
 
 #Imprimimos los valores nulos por cada columna
-NaN = file.isnull().sum()
+NaN = df.isnull().sum()
 print(NaN)
 
 #Imprimimos los NO valores nulos
-NNaN = file.notnull().sum()
+NNaN = df.notnull().sum()
 print(NNaN)
