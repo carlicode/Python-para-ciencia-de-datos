@@ -8,6 +8,7 @@ df = pd.read_csv('empleados_2_1.csv', delimiter=';')
 Pearson = df['Experiencia'].corr(df['Salario'])
 print(Pearson)
 
+#Imprimimos mapa de calor
 print(sns.heatmap(df.corr(numeric_only=True),vmin= -1, vmax=1, annot=True))
 
 
